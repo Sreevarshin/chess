@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess Game Login</title>
+  <style>
+    /* CSS Styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #121212;
+      color: #fff;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 400px;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #f0a500;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      width: 100%;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+      color: #d1d1d1;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background: #333;
+      color: #fff;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #f0a500;
+      background: #444;
+    }
+
+    .login-button {
+      background: #f0a500;
+      color: #121212;
+      font-weight: bold;
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .login-button:hover {
+      background: #d18b00;
+    }
+
+    .forgot-password {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #d1d1d1;
+      text-align: center;
+    }
+
+    .forgot-password a {
+      color: #f0a500;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .forgot-password a:hover {
+      color: #d18b00;
+    }
+  </style>
+</head>
+<body>
+  <video class="background-video" autoplay muted loop>
+    <source src="c2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="container">
+    <h1>Login to Chess Battle</h1>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-button">Login</button>
+    </form>
+    <p class="forgot-password">
+      Forgot your password? <a href="#">Reset it here</a>.
+    </p>
+  </div>
+
+  <script>
+    // JavaScript Code
+    document.getElementById('loginForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Login successful! Welcome to the Chess Battle!');
+    });
+  </script>
+</body>
+</html>
